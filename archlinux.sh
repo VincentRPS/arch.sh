@@ -5,17 +5,18 @@ cd ${HOME}/yay
 makepkg -si --noconfirm
 cd ~
 PKGS=(
-'plasma-desktop'
+'nano'
 'nvidia'
-'pipewire'
+'base'
+'base-devel'
+'linux'
+'linux-headers'
+'linux-firmware'
+'networkmanager'
+'plasma-desktop'
 'konsole'
 'dolphin'
-base
-base-devel
-linux
-linux-headers
-lnux-firmware'
-'networkmanager'
+'pipewire'
 )
 AURPKGS=(
 'spotify'
@@ -29,6 +30,7 @@ echo "installing the big boys"
 for PKG in "${PKGS[@]}"; do
   echo "Now installing ${PKG}"
   sudo pacman -S "$PKG" --noconfirm --needed
+echo "starting install of aur packages"
 for PKG in "${AURPKGS[@]}"; do
   echo "Now installing ${PKG}"
   sudo yay -S --noconfirm $PKG
