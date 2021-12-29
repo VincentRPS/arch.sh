@@ -8,6 +8,14 @@ PKGS=(
 'plasma-desktop'
 'nvidia'
 'pipewire'
+'konsole'
+'dolphin'
+base
+base-devel
+linux
+linux-headers
+lnux-firmware'
+'networkmanager'
 )
 AURPKGS=(
 'spotify'
